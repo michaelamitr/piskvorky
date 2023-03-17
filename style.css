@@ -1,0 +1,100 @@
+/*Nadpis Piškvorky je fontem Lobster. Najdeš ho zdarma na Google Fonts.
+Různé vzdálenosti, velikosti textu odhadni od oka nebo přesně změř na obrázku výše.
+Gradient v pozadí jde z fialové  #615dad do růžové  #ffc8da.
+Další barvy, které se ti budou hodit:
+Barva textu  #ffffff.
+Podkladová tmavě modrá  #283e50.
+Tlačítko Pravidla  #1fcca4. A po najetí myši  #1cbb96.
+Tlačítko Začít hrát  #0197f6. Po najetí  #0090e9.*/
+
+@font-face {
+  font-family: 'Lobster';
+  src: url('Lobster/Lobster-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  padding-top: 60px;
+  margin-bottom: 500px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+  /*background-image: linear-gradient(to bottom, #ff0000, #ff7b00, #ffd000, rgb(170, 255, 0), rgb(14, 91, 0), rgb(0, 255, 234), rgb(0, 135, 145), rgb(0, 40, 121), rgb(135, 5, 190), rgb(255, 0, 162));*/
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Lobster', sans-serif;
+}
+
+.image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 350px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: calc(350px - 40px);
+  text-align: center;
+  background-color: #283e50;
+  color: white;
+  padding: 0 20px 0 20px;
+}
+
+.buttnos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  width: 350px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 50px;
+}
+
+.buttonrules {
+  background-color: #1fcca4;
+  border: 0;
+  text-decoration: dotted;
+}
+
+.buttongame {
+  background-color: #0197f6;
+  border: 0;
+}
+
+.buttonrules:hover {
+  background-color: #1cbb96;
+  cursor: pointer;
+}
+
+.buttongame:hover {
+  background-color: #0090e9;
+  cursor: pointer;
+}
