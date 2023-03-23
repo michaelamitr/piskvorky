@@ -7,6 +7,18 @@ Podkladová tmavě modrá  #283e50.
 Tlačítko Pravidla  #1fcca4. A po najetí myši  #1cbb96.
 Tlačítko Začít hrát  #0197f6. Po najetí  #0090e9.*/
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: 'Lobster';
   src: url('Lobster/Lobster-Regular.ttf') format('opentype');
@@ -34,8 +46,8 @@ h1 {
   font-size: 50px;
   display: flex;
   justify-content: center;
-  margin: 10px;
-  padding: 10px 10px 0px 10px;
+  align-items: center;
+  height: 100px;
 }
 
 .image {
@@ -48,11 +60,11 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: calc(350px - 40px);
+  width: 350px;
   text-align: center;
   background-color: #283e50;
   color: white;
-  padding: 0 20px 0 20px;
+  padding: 0px 20px 25px 20px;
 }
 
 .buttnos {
