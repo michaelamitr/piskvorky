@@ -9,6 +9,7 @@ Tlačítko Začít hrát  #0197f6. Po najetí  #0090e9.*/
 
 html {
   box-sizing: border-box;
+  padding-bottom: 30px;
 }
 
 *,
@@ -98,7 +99,6 @@ a {
 .buttonrules {
   background-color: #1fcca4;
   border: 0;
-  text-decoration: dotted;
 }
 
 .buttongame {
@@ -114,4 +114,88 @@ a {
 .buttongame:hover {
   background-color: #0090e9;
   cursor: pointer;
+}
+
+/*------------------------------------*/
+.title {
+  color: white;
+  /*font-size: 10vmin;*/
+  margin-bottom: -20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vmin;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.buttons__gamepage {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 20px;
+}
+
+.buttonfield__gamepage {
+  width: 50px;
+  height: 50px;
+}
+
+.buttonsgame__border {
+  border-radius: 10px;
+}
+
+.game__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 4vmin;
+  color: white;
+}
+
+.current__player__container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.playfield__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.playfield__button {
+  background-color: rgba(255, 255, 255, 0.5);
+  max-width: calc(80vmin / 10);
+  height: calc(80vmin / 10);
+  margin: 0 auto;
+  padding: 0;
+  border: 0px;
+  border-top: 2px solid rgba(0, 0, 0, 0.669);
+  border-right: 2px solid rgba(0, 0, 0, 0.669);
+}
+
+.playfield__button__left {
+  border-left: 2px solid rgba(0, 0, 0, 0.669);
+}
+
+.playfield__button__bottom {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.669);
+}
+
+.playfield__button:hover,
+.playfield__button:focus {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8)
 }
