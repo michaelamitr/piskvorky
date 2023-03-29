@@ -9,7 +9,7 @@ Tlačítko Začít hrát  #0197f6. Po najetí  #0090e9.*/
 
 html {
   box-sizing: border-box;
-  padding-bottom: 100px;
+  min-height: 100vh
 }
 
 *,
@@ -128,6 +128,7 @@ a {
   max-width: 80vmin;
   margin: 0 auto;
   gap: 20px;
+  max-height: 99vh;
 }
 
 .buttons__gamepage {
