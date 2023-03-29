@@ -119,7 +119,6 @@ a {
 /*------------------------------------*/
 .title {
   color: white;
-  /*font-size: 10vmin;*/
   margin-bottom: -20px;
 }
 
@@ -153,7 +152,7 @@ a {
   align-items: center;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 4vmin;
+  font-size: 20px;
   color: white;
 }
 
