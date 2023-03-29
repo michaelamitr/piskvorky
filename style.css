@@ -10,6 +10,7 @@ Tlačítko Začít hrát  #0197f6. Po najetí  #0090e9.*/
 html {
   box-sizing: border-box;
   padding-bottom: 30px;
+  min-height: 100vh;
 }
 
 *,
