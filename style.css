@@ -173,6 +173,7 @@ a {
 .playfield__container {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .playfield__button {
