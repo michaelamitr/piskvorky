@@ -119,8 +119,10 @@ a {
 
 /*------------------------------------*/
 .title {
-  color: white;
   margin-bottom: -20px;
+  background: -webkit-linear-gradient(rgb(106, 0, 65), #004337);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container {
@@ -162,15 +164,6 @@ a {
   gap: 15px;
   align-items: center;
 }
-
-/*
-.circle {
-  width: 30px;
-  height: 30px;
-  border: 5px solid white;
-  border-radius: 50%;
-}
-*/
 
 .playfield__container {
   display: flex;
