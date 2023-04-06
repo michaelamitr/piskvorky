@@ -211,8 +211,9 @@ a {
 
 .board__field--circle::before {
   content: '';
-  width: 28px;
-  height: 28px;
+  display: block;
+  width: 70%;
+  height: 70%;
   border-radius: 50%;
   position: absolute;
   top: 50%;
