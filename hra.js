@@ -55,3 +55,11 @@ document
 document
   .querySelector('button:nth-child(10)')
   .addEventListener('click', circleCrossSwitch);
+
+const reloadButton = document.querySelector('#reload');
+reloadButton.onclick = function () {
+  if (confirm('Opravdu chcete začít znovu?')) {
+    location.reload();
+  }
+  return event.preventDefault();
+};

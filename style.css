@@ -120,7 +120,7 @@ a {
 /*------------------------------------*/
 .title {
   margin-bottom: -20px;
-  background: -webkit-linear-gradient(rgb(106, 0, 65), #004337);
+  background: -webkit-linear-gradient(white, rgb(106, 0, 65), #004337, rgb(106, 0, 65));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
