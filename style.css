@@ -169,13 +169,6 @@ a {
   border: 1.3px solid rgba(0, 0, 0, 0.669);
 }
 
-.border {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid rgba(0, 0, 0, 0.669);
-  min-width: 100.3%;
-}
-
 .playfield__button:hover,
 .playfield__button:focus {
   cursor: pointer;
