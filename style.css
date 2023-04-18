@@ -165,18 +165,15 @@ a {
 .playfield__button {
   background-color: rgb(255 255 255 / 25%);
   max-width: calc(80vmin / 10);
-  height: calc(80vmin / 10);
-  border: 0px;
-  border-top: 2px solid rgba(0, 0, 0, 0.669);
-  border-right: 2px solid rgba(0, 0, 0, 0.669);
+  max-height: calc(80vmin / 10);
+  border: 1.3px solid rgba(0, 0, 0, 0.669);
 }
 
-.playfield__button__left {
-  border-left: 2px solid rgba(0, 0, 0, 0.669);
-}
-
-.playfield__button__bottom {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.669);
+.border {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgba(0, 0, 0, 0.669);
+  min-width: 100.3%;
 }
 
 .playfield__button:hover,
