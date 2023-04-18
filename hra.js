@@ -38,7 +38,7 @@ function circleCrossSwitch() {
   const winner = findWinner(allGameFieldButtonsArray);
   if (winner === 'o' || winner === 'x') {
     setTimeout(function () {
-      alert(`Vyhrál hráč se symbolem "${winner}"!`);
+      alert(`Vyhrál hráč se symbolem "${winner}"🥳🍾!`);
       location.reload();
     }, 500);
   }
