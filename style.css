@@ -175,8 +175,6 @@ a {
   background-color: rgb(255 255 255 / 25%);
   max-width: calc(80vmin / 10);
   height: calc(80vmin / 10);
-  margin: 0 auto;
-  padding: 0;
   border: 0px;
   border-top: 2px solid rgba(0, 0, 0, 0.669);
   border-right: 2px solid rgba(0, 0, 0, 0.669);
@@ -215,7 +213,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   border: 4px solid rgb(106, 0, 65);
-  animation: growingcircle 0.15s ease-in-out forwards;
+  animation: growingcircle 0.15s ease-out forwards;
 }
 
 @keyframes growingcircle {
@@ -257,12 +255,10 @@ a {
 
 @keyframes growingcross {
   from {
-    height: 0%;
-    width: 0px;
+    scale: 0;
   }
 
   to {
-    height: 80%;
-    width: 4px;
+    scale: 1;
   }
 }
