@@ -1,5 +1,3 @@
-let currentPlayer = 'circle';
-
 const classAddCircle = (event) => {
   event.target.classList.add('board__field--circle');
   const img = document.querySelector('#nowplays');
@@ -25,37 +23,6 @@ function circleCrossSwitch() {
   }
 }
 
-document
-  .querySelector('button:nth-child(1)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(2)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(3)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(4)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(5)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(6)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(7)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(8)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(9)')
-  .addEventListener('click', circleCrossSwitch);
-document
-  .querySelector('button:nth-child(10)')
-  .addEventListener('click', circleCrossSwitch);
-
 const reloadButton = document.querySelector('#reload');
 reloadButton.onclick = function () {
   if (confirm('Opravdu chcete začít znovu?')) {
@@ -63,3 +30,11 @@ reloadButton.onclick = function () {
   }
   return event.preventDefault();
 };
+
+const allGameFieldButtons = document.querySelectorAll('.playfield__button');
+
+console.log(allGameFieldButtons);
+
+allGameFieldButtons.forEach((button) => {
+  button.addEventListener('click', circleCrossSwitch);
+});
