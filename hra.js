@@ -22,9 +22,6 @@ function circleCrossSwitch() {
   count++;
   if (count % 2 === 1) {
     classAddCircle(event);
-    Array.from(allGameFieldButtons).map((button) => {
-      return (button.disabled = true);
-    });
     fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
       method: 'POST',
       headers: {
@@ -46,16 +43,6 @@ function circleCrossSwitch() {
     })
       .then((response) => response.json())
       .then((data) => {
-        Array.from(allGameFieldButtons).map((button) => {
-          if (
-            button.classList.contains('board__field--circle') ||
-            button.classList.contains('board__field--cross')
-          ) {
-            return (button.disabled = true);
-          } else {
-            return (button.disabled = false);
-          }
-        });
         const { x, y } = data.position;
         const field = allGameFieldButtons[x + y * 10];
         field.click();
@@ -111,3 +98,21 @@ reloadButton.onclick = function () {
 allGameFieldButtons.forEach((button) => {
   button.addEventListener('click', circleCrossSwitch);
 });
+
+/*------------------------------------*/
+/*
+Array.from(allGameFieldButtons).map((button) => {
+  return (button.disabled = true);
+});
+
+Array.from(allGameFieldButtons).map((button) => {
+  if (
+    button.classList.contains('board__field--circle') ||
+    button.classList.contains('board__field--cross')
+  ) {
+    return (button.disabled = true);
+  } else {
+    return (button.disabled = false);
+  }
+});
+*/
