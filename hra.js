@@ -1,5 +1,7 @@
 import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
+const allGameFieldButtons = document.querySelectorAll('.playfield__button');
+
 const classAddCircle = (event) => {
   event.target.classList.add('board__field--circle');
   const img = document.querySelector('#nowplays');
@@ -20,6 +22,44 @@ function circleCrossSwitch() {
   count++;
   if (count % 2 === 1) {
     classAddCircle(event);
+    Array.from(allGameFieldButtons).map((button) => {
+      return (button.disabled = true);
+    });
+    fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        board: Array.from(allGameFieldButtons).map((button) => {
+          if (button.classList.contains('board__field--circle')) {
+            return 'o';
+          }
+          if (button.classList.contains('board__field--cross')) {
+            return 'x';
+          } else {
+            return '_';
+          }
+        }),
+        player: 'x',
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        Array.from(allGameFieldButtons).map((button) => {
+          if (
+            button.classList.contains('board__field--circle') ||
+            button.classList.contains('board__field--cross')
+          ) {
+            return (button.disabled = true);
+          } else {
+            return (button.disabled = false);
+          }
+        });
+        const { x, y } = data.position;
+        const field = allGameFieldButtons[x + y * 10];
+        field.click();
+      });
   } else {
     classAddCross(event);
   }
@@ -42,15 +82,17 @@ function circleCrossSwitch() {
       location.reload();
     }, 500);
   }
-  let allButtonsDisabled = true;
-  allGameFieldButtons.forEach((button) => {
-    if (!button.disabled) {
-      allButtonsDisabled = false;
-      return;
-    }
-  });
 
-  if (allButtonsDisabled) {
+  const circlesOnlyArrayLength = Array.from(allGameFieldButtons).filter(
+    (button) => button.classList.contains('board__field--circle'),
+  ).length;
+  const crossesOnlyArrayLength = Array.from(allGameFieldButtons).filter(
+    (button) => button.classList.contains('board__field--cross'),
+  ).length;
+  const allAlreadyPlayedButtonsArrayLength =
+    circlesOnlyArrayLength + crossesOnlyArrayLength;
+  console.log(allAlreadyPlayedButtonsArrayLength);
+  if (allAlreadyPlayedButtonsArrayLength === 100) {
     setTimeout(function () {
       alert('Hra skončila nerozhodně.');
       location.reload();
@@ -65,8 +107,6 @@ reloadButton.onclick = function () {
   }
   return event.preventDefault();
 };
-
-const allGameFieldButtons = document.querySelectorAll('.playfield__button');
 
 allGameFieldButtons.forEach((button) => {
   button.addEventListener('click', circleCrossSwitch);
