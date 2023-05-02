@@ -104,7 +104,7 @@ function circleCrossSwitch() {
   console.log(allAlreadyPlayedButtonsArrayLength);
   if (allAlreadyPlayedButtonsArrayLength === 100) {
     setTimeout(function () {
-      alert('Hra skončila nerozhodně.');
+      alert('Hra skončila nerozhodně.🤷🏼');
       location.reload();
     }, 500);
   }
@@ -112,7 +112,7 @@ function circleCrossSwitch() {
 
 const reloadButton = document.querySelector('#reload');
 reloadButton.onclick = function () {
-  if (confirm('Opravdu chcete začít znovu?')) {
+  if (confirm('Opravdu chcete začít znovu?🙀')) {
     location.reload();
   }
   return event.preventDefault();
