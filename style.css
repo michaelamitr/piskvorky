@@ -137,6 +137,15 @@ a {
 .buttonreload {
   background-color: #0197f6;
   border: 0;
+  cursor: pointer;
+}
+
+.buttonhome:hover {
+  background-color: #1cbb96;
+}
+
+.buttonreload:hover {
+  background-color: #0090e9;
 }
 
 .buttonrules:hover {
