@@ -23,8 +23,8 @@ body {
   padding: 0;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
-  /*background-image: linear-gradient(to bottom, #ff0000, #ff7b00, #ffd000, rgb(170, 255, 0), rgb(14, 91, 0), rgb(0, 255, 234), rgb(0, 135, 145), rgb(0, 40, 121), rgb(135, 5, 190), rgb(255, 0, 162));*/
+  /*background-image: linear-gradient(to bottom, #615dad, #ffc8da);*/
+  background-image: linear-gradient(to bottom, #ff0000, #ff7b00, #ffd000, rgb(170, 255, 0), rgb(21, 138, 0), rgb(0, 255, 234), rgb(0, 135, 145), rgb(0, 44, 133), rgb(135, 5, 190), rgb(255, 17, 168));
 }
 
 .content {
@@ -91,11 +91,13 @@ a {
 .buttonrules {
   background-color: #1fcca4;
   border: 0;
+  border-bottom: 1px solid #283e50;
 }
 
 .buttongame {
   background-color: #0197f6;
   border: 0;
+  border-top: 1px solid #283e50;
 }
 
 .buttonrules:hover {
@@ -163,7 +165,7 @@ a {
 }
 
 .playfield__button {
-  background-color: rgb(255 255 255 / 25%);
+  background-color: rgba(255, 255, 255, 0.596);
   max-width: calc(80vmin / 10);
   max-height: calc(80vmin / 10);
   border: 1.3px solid rgba(0, 0, 0, 0.669);
