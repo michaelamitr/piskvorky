@@ -91,13 +91,23 @@ a {
 .buttonrules {
   background-color: #1fcca4;
   border: 0;
-  border: 0.5px solid #283e50;
+  border-bottom: 0.5px solid #283e50;
 }
 
 .buttongame {
   background-color: #0197f6;
   border: 0;
-  border: 0.5px solid #283e50;
+  border-top: 0.5px solid #283e50;
+}
+
+.buttonhome {
+  background-color: #1fcca4;
+  border: 0;
+}
+
+.buttonreload {
+  background-color: #0197f6;
+  border: 0;
 }
 
 .buttonrules:hover {
