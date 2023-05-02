@@ -107,8 +107,8 @@ a {
 .rainbow__button__toggle {
   background-image: linear-gradient(to bottom, #ff0000, #ff7b00, #ffd000, rgb(170, 255, 0), rgb(21, 138, 0), rgb(0, 255, 234), rgb(0, 135, 145), rgb(0, 44, 133), rgb(135, 5, 190), rgb(255, 17, 168));
   border: 0;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 }
 
@@ -117,15 +117,15 @@ a {
   cursor: pointer;
 }
 
-.background__toggle__two {
+.purple__button__toggle {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   border: 0;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 }
 
-.background__toggle__two:hover {
+.purple__button__toggle:hover {
   background-image: linear-gradient(to bottom, #504c8e, #cea2b0);
 }
 

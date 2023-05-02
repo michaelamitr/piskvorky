@@ -1,5 +1,5 @@
 const toggleBackground = () => {
-  document.querySelector('#toggle').classList.toggle('background__toggle__two');
+  document.querySelector('#toggle').classList.toggle('purple__button__toggle');
   document.querySelector('body').classList.toggle('rainbow');
 };
 
