@@ -101,7 +101,6 @@ function circleCrossSwitch() {
   ).length;
   const allAlreadyPlayedButtonsArrayLength =
     circlesOnlyArrayLength + crossesOnlyArrayLength;
-  console.log(allAlreadyPlayedButtonsArrayLength);
   if (allAlreadyPlayedButtonsArrayLength === 100) {
     setTimeout(function () {
       alert('Hra skončila nerozhodně.🤷🏼');

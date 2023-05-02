@@ -23,7 +23,11 @@ body {
   padding: 0;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  /*background-image: linear-gradient(to bottom, #615dad, #ffc8da);*/
+  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+
+}
+
+.rainbow {
   background-image: linear-gradient(to bottom, #ff0000, #ff7b00, #ffd000, rgb(170, 255, 0), rgb(21, 138, 0), rgb(0, 255, 234), rgb(0, 135, 145), rgb(0, 44, 133), rgb(135, 5, 190), rgb(255, 17, 168));
 }
 
@@ -98,6 +102,31 @@ a {
   background-color: #0197f6;
   border: 0;
   border-top: 0.5px solid #283e50;
+}
+
+.rainbow__button__toggle {
+  background-image: linear-gradient(to bottom, #ff0000, #ff7b00, #ffd000, rgb(170, 255, 0), rgb(21, 138, 0), rgb(0, 255, 234), rgb(0, 135, 145), rgb(0, 44, 133), rgb(135, 5, 190), rgb(255, 17, 168));
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.rainbow__button__toggle:hover {
+  background-image: linear-gradient(to bottom, #ce0000, #bc5b00, #cda700, rgb(132, 198, 0), rgb(17, 114, 0), rgb(0, 183, 167), rgb(0, 110, 118), rgb(0, 37, 112), rgb(117, 0, 168), rgb(196, 17, 130));
+  cursor: pointer;
+}
+
+.background__toggle__two {
+  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.background__toggle__two:hover {
+  background-image: linear-gradient(to bottom, #504c8e, #cea2b0);
 }
 
 .buttonhome {
