@@ -16,12 +16,32 @@ const classAddCross = (event) => {
   event.target.disabled = true;
 };
 
+const allButtonsDisabled = () => {
+  Array.from(allGameFieldButtons).map((button) => {
+    return (button.disabled = true);
+  });
+};
+
+const freeButtonsActivate = () => {
+  Array.from(allGameFieldButtons).map((button) => {
+    if (
+      button.classList.contains('board__field--circle') ||
+      button.classList.contains('board__field--cross')
+    ) {
+      return (button.disabled = true);
+    } else {
+      return (button.disabled = false);
+    }
+  });
+};
+
 let count = 0;
 
 function circleCrossSwitch() {
   count++;
   if (count % 2 === 1) {
     classAddCircle(event);
+    allButtonsDisabled();
     fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
       method: 'POST',
       headers: {
@@ -45,7 +65,10 @@ function circleCrossSwitch() {
       .then((data) => {
         const { x, y } = data.position;
         const field = allGameFieldButtons[x + y * 10];
+        freeButtonsActivate();
         field.click();
+        allButtonsDisabled();
+        setTimeout(freeButtonsActivate, 150);
       });
   } else {
     classAddCross(event);
@@ -98,21 +121,3 @@ reloadButton.onclick = function () {
 allGameFieldButtons.forEach((button) => {
   button.addEventListener('click', circleCrossSwitch);
 });
-
-/*------------------------------------*/
-/*
-Array.from(allGameFieldButtons).map((button) => {
-  return (button.disabled = true);
-});
-
-Array.from(allGameFieldButtons).map((button) => {
-  if (
-    button.classList.contains('board__field--circle') ||
-    button.classList.contains('board__field--cross')
-  ) {
-    return (button.disabled = true);
-  } else {
-    return (button.disabled = false);
-  }
-});
-*/
